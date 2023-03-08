@@ -10,17 +10,19 @@ export type CellProps = {
 const Cell = ({ x, y, color, paint }: CellProps) => {
   return (
     <td
-      draggable='true'
+      draggable="true"
       style={{
-        backgroundColor: color,
-        width: "1.5rem",
-        height: "1.5rem",
+        width: "9rem",
+        height: "9rem",
         cursor: "pointer",
-        border: "1px solid"
+        border: "1px solid",
+        fontSize: "5rem",
       }}
       onClick={() => paint(x, y)}
       onDragEnter={() => paint(x, y)}
-    ></td>
+    >
+      {color}
+    </td>
   );
 };
 
