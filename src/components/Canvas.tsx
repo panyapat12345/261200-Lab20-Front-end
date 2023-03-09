@@ -14,7 +14,7 @@ function Canvas() {
   useEffect(() => {
     if (!client) {
       client = new Client({
-        brokerURL: "ws://192.168.43.134:8080/demo-websocket",
+        brokerURL: "ws://localhost:8080/demo-websocket",
         onConnect: () => {
           client.subscribe("/app/canvas", (message) => {
             const body = JSON.parse(message.body);
